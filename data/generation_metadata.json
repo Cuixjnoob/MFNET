@@ -1,0 +1,24 @@
+{
+  "lv": {
+    "generator": "discrete generalized Lotka-Volterra in log state",
+    "T_generated": 900,
+    "T_used": 260,
+    "n_trajectories": 24,
+    "seed": 123,
+    "trajectory_index": 0,
+    "dt_absorbed_in_A": 0.035,
+    "csv_for_training": "lv_main_log.csv",
+    "state_used_by_model": "z=log(x+1e-8)"
+  },
+  "lorenz96_N40": {
+    "equation": "dx_i/dt=(x_{i+1}-x_{i-2})x_{i-1}-x_i+F",
+    "N": 40,
+    "T": 2200,
+    "forcing": 8.0,
+    "dt": 0.01,
+    "sample_stride": 5,
+    "burn": 1000,
+    "seed": 0,
+    "csv_for_training": "lorenz96_N40.csv"
+  }
+}

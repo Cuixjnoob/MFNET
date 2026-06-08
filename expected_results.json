@@ -1,0 +1,51 @@
+{
+  "core_single_seed_validation": {
+    "lotka_volterra_seed0": {
+      "epochs": 100,
+      "integrator": "heun",
+      "forecast": {
+        "h1": {"rmse": 0.000641, "r2": 0.999997},
+        "h2": {"rmse": 0.001241, "r2": 0.999988},
+        "h4": {"rmse": 0.002466, "r2": 0.999953}
+      },
+      "structure": {
+        "pearson_offdiag": 0.992809,
+        "spearman_offdiag": 0.982202,
+        "sign_accuracy_offdiag": 1.0
+      }
+    },
+    "lorenz96_N40_seed0": {
+      "epochs": 400,
+      "integrator": "heun",
+      "forecast": {
+        "h1": {"rmse": 0.079155, "r2": 0.993899},
+        "h4": {"rmse": 0.214892, "r2": 0.955102},
+        "h8": {"rmse": 0.483776, "r2": 0.772818},
+        "h16": {"rmse": 0.795141, "r2": 0.383511},
+        "h24": {"rmse": 0.927341, "r2": 0.160180}
+      },
+      "structure": {
+        "precision_at_K": 1.0,
+        "K": 120,
+        "local_nonlocal_ratio": 17.361563
+      }
+    }
+  },
+  "paper_lorenz96_N40_5seed_reference": {
+    "seeds": [0, 1, 2, 3, 4],
+    "epochs": 400,
+    "integrator": "heun",
+    "forecast": {
+      "h4": {"rmse_mean": 0.204697, "rmse_std": 0.007710, "r2_mean": 0.958984, "r2_std": 0.002446},
+      "h8": {"rmse_mean": 0.454963, "rmse_std": 0.024098, "r2_mean": 0.797568, "r2_std": 0.018301},
+      "h24": {"rmse_mean": 0.926991, "rmse_std": 0.028229, "r2_mean": 0.158890, "r2_std": 0.040026}
+    },
+    "structure": {
+      "local_nonlocal_ratio_mean": 19.799719,
+      "local_nonlocal_ratio_std": 1.002981,
+      "precision_at_K_mean": 1.0,
+      "precision_at_K_std": 0.0,
+      "K": 120
+    }
+  }
+}
